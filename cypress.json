@@ -1,3 +1,7 @@
 {
-    "testFiles":"**/steps/*.js"
+    "testFiles":"**/steps/*.js",
+    "env":{
+        "USERNAME" :"kevinqatester@proton.me",
+        "PASSWORD" :"teste12345"
+    }
 }
