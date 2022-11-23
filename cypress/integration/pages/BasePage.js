@@ -1,40 +1,46 @@
 /// <reference types="cypress" />
 export default class BasePage {
-   click(elemet){ 
-      cy.get(elemet).click() 
+   click(elemet) {
+      cy.get(elemet).click()
    }
-  
-   clickForce(elemet){ 
-      cy.get(elemet).click({force:true}) 
-   } 
-  
-   preencherInput(element, text){ 
+
+   clickForce(elemet) {
+      cy.get(elemet).click({
+         force: true
+      })
+   }
+
+   preencherInput(element, text) {
       cy.get(element).clear()
       cy.get(element).type(text)
    }
-   
-   limparInput(element){
+
+   limparInput(element) {
       cy.get(element).clear()
    }
 
-   preencherInputComTeclaNoFinal(element, text, tecla){
+   preencherInputComTeclaNoFinal(element, text, tecla) {
       cy.get(element).type(text).type(tecla);
    }
-  
-   preencherInputForce(element, text){ 
-       cy.get(element).type(text, {force:true})
-   }
-    
-   tempo(tempo){ 
-       cy.wait(tempo) 
+
+   preencherInputForce(element, text) {
+      cy.get(element).type(text, {
+         force: true
+      })
    }
 
-   select(element, value){ 
-      cy.get(element).select(value,{force: true})
+   tempo(tempo) {
+      cy.wait(tempo)
    }
-  
-   validarText(element, text){ 
-      cy.get(element).should('contain', text) 
+
+   select(element, value) {
+      cy.get(element).select(value, {
+         force: true
+      })
+   }
+
+   validarText(element, text) {
+      cy.get(element).should('contain', text)
    }
 
    validarQuantItemNaLista(element, quant) {
@@ -44,5 +50,9 @@ export default class BasePage {
    validarUrl(url) {
       cy.url()
          .should('contain', url)
+   }
+
+   validarVisibilidade(element) {
+      cy.get(element).should('be-visible')
    }
 }
