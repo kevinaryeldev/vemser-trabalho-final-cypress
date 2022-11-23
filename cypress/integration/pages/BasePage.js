@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-
 export default class BasePage {
    click(elemet){ 
       cy.get(elemet).click() 
@@ -37,14 +36,13 @@ export default class BasePage {
    validarText(element, text){ 
       cy.get(element).should('contain', text) 
    }
-  
-   validarQuantItemNaLista(element, quant){
+
+   validarQuantItemNaLista(element, quant) {
       cy.get(element).should('have.length', quant)
    }
 
-   validarUrl(url){
+   validarUrl(url) {
       cy.url()
-      .should('contain', url)
+         .should('contain', url)
    }
 }
-  
