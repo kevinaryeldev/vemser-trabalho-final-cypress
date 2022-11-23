@@ -10,6 +10,11 @@ export let cepInserido = "#glow-ingress-line2";
 export let msgCepIncorreto = "#GLUXZipError > div > div > div";
 const basePage = new BasePage()
 export default class HomePage {
+    pesquisarItemAleatorio(texto){
+        basePage.preencherInput(inputBarraPesquisa,texto)
+        basePage.select(dropBoxBarraPesquisa,"search-alias=automotive")
+        basePage.click(btnBarraPesquisar)
+    }
     barraPesquisaPreencherInput(texto){
         basePage.preencherInput(inputBarraPesquisa,texto)
     }

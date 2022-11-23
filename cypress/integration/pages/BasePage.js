@@ -45,4 +45,7 @@ export default class BasePage {
       cy.url()
          .should('contain', url)
    }
+   validarNegativaUrl(url){
+      cy.url().should('not.contain',url)
+   }
 }
