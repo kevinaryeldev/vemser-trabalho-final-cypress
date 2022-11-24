@@ -51,8 +51,18 @@ export default class BasePage {
       cy.url()
          .should('contain', url)
    }
+   validarUrlDiferente(url) {
+      cy.url()
+         .should('not.contain', url)
+   }
 
    validarVisibilidade(element) {
       cy.get(element).should('be-visible')
+   }
+
+   getElement(element) {
+      cy.get(element).its('0.contentDocument.body')
+         .should('be visible')
+         .then(cy.wrap)
    }
 }

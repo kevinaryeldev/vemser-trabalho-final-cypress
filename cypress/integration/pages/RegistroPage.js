@@ -1,7 +1,5 @@
 import BasePage from "./BasePage";
-import {
-    fazerLoginBtn
-} from "./HomePage";
+
 import {
     criarContaBtn
 } from "./LoginPage";
@@ -12,8 +10,7 @@ let senha = "#ap_password"
 let confirmarSenha = "#ap_password_check"
 let continuarBtn = "#continue"
 
-export let msgEmailInvalido = "#auth-email-invalid-claim-alert>div>div";
-export let msgEmailUtilizado = "	    "
+export let msgEmailInvalido = "#auth-email-invalid-claim-alert > div > div";
 
 export let msgConfirmEmail = "#verification-code-form > div:nth-child(10) > div.a-row.a-spacing-small > h1";
 
@@ -22,9 +19,9 @@ const basePage = new BasePage
 export default class RegistroPage {
     fazerRegistro(novoNome, novoEmail, novaSenha) {
         cy.visit("https://www.amazon.com.br/login")
+        cy.clearLocalStorage();
+        cy.clearCookies();
         basePage.click(criarContaBtn);
-
-        cy.reload(true)
 
         basePage.preencherInput(nome, novoNome);
         basePage.preencherInput(email, novoEmail);
