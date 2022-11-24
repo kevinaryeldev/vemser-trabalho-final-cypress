@@ -1,11 +1,12 @@
-import BasePage from "./BasePage"
-
+import BasePage from "./BasePage";
 const basePage = new BasePage()
 const inputLoginEmail = "#ap_email"
 const inputLoginSenha = "#ap_password"
 const btnLoginContinuar = "#continue"
 const btnLoginSubmit = "#signInSubmit"
 const textErrorMessage = ".a-alert-heading"
+export let criarContaBtn = "#createAccountSubmit";
+
 export default class LoginPage{
     preencherInputLoginEmail(email){
         basePage.preencherInput(inputLoginEmail,email)

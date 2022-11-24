@@ -8,10 +8,14 @@ let selEnderoBtn = "#nav-global-location-popover-link";
 let cepPrimeiroCampo = "input.a-declarative.a-span7";
 let cepSegundoCampo = "input.a-declarative.a-span4";
 let confirmarBtn = "#GLUXZipUpdate > span > input";
+export let fazerLoginBtn = "#nav-link-accountList";
 export let cepInserido = "#glow-ingress-line2";
 export let msgCepIncorreto = "#GLUXZipError > div > div > div";
 const basePage = new BasePage()
 export default class HomePage {
+    barraPesquisaPreencherInput(texto) {
+        basePage.preencherInput(inputBarraPesquisa, texto)
+    }
     clickarBtnIrParaLogin(){
         basePage.click(btnLoginPage)
     }
@@ -24,9 +28,9 @@ export default class HomePage {
         basePage.preencherInput(inputBarraPesquisa,texto)
     }
     barraPesquisaDropboxSelecionarCategoria(){
-        basePage.select(dropBoxBarraPesquisa,"search-alias=automotive")
+        basePage.select(dropBoxBarraPesquisa, "search-alias=automotive")
     }
-    barraPesquisaClicarBtnPesquisar(){
+    barraPesquisaClicarBtnPesquisar() {
         basePage.click(btnBarraPesquisar)
     }
     buscarCep(primeiroCampo, segundoCampo) {

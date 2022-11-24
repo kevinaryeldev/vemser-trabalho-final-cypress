@@ -30,7 +30,7 @@ export default class ListaProdutosPage{
         basePage.validarUrl(texto)
     }
     validarUrlPaginaNaoContem(texto){
-        basePage.validarNegativaUrl(texto)
+        basePage.validarUrlDiferente(texto)
     }
 
 }
