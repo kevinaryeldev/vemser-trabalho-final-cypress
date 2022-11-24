@@ -12,7 +12,7 @@ context('Testes Login',()=>{
             cy.allure()
             .epic('Teste de Login')
             .feature('Cenários Positivos')
-            story('Fazer login com dados válidos')
+            .story('Fazer login com dados válidos')
             .owner('Kevin Aryel');
             homePage.clickarBtnIrParaLogin()
             loginPage.preencherInputLoginEmail(Cypress.env('USERNAME'))
@@ -27,7 +27,7 @@ context('Testes Login',()=>{
             cy.allure()
             .epic('Teste de Login')
             .feature('Cenários Negativos')
-            story('Fazer login com email inválido')
+            .story('Fazer login com email inválido')
             .owner('Kevin Aryel');
             homePage.clickarBtnIrParaLogin()
             loginPage.preencherInputLoginEmail(faker.name.fullName())
@@ -38,7 +38,7 @@ context('Testes Login',()=>{
             cy.allure()
             .epic('Teste de Login')
             .feature('Cenários Negativos')
-            story('Fazer login com senha inválida')
+            .story('Fazer login com senha inválida')
             .owner('Kevin Aryel');
             homePage.clickarBtnIrParaLogin()
             loginPage.preencherInputLoginEmail(Cypress.env('USERNAME'))

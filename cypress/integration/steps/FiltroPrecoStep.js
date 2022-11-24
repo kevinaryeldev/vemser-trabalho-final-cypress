@@ -11,7 +11,7 @@ context('Testes Filtro de Preco',()=>{
             cy.allure()
             .epic('Teste de Filtro')
             .feature('Cenários Positivos')
-            story('Filtrar dados com valor valido')
+            .story('Filtrar dados com valor valido')
             .owner('Kevin Aryel');
             homePage.pesquisarItemAleatorio(faker.color.human())
             listaProdutosPage.filtroPrecoInserirValores(10,20)
@@ -24,7 +24,7 @@ context('Testes Filtro de Preco',()=>{
             cy.allure()
             .epic('Teste de Filtro')
             .feature('Cenários Negativoss')
-            story('Filtrar dados com valor max maior que valor min')
+            .story('Filtrar dados com valor max maior que valor min')
             .owner('Kevin Aryel');
             homePage.pesquisarItemAleatorio(faker.color.human())
             listaProdutosPage.filtroPrecoInserirValores(20,10)
@@ -35,7 +35,7 @@ context('Testes Filtro de Preco',()=>{
             cy.allure()
             .epic('Teste de Filtro')
             .feature('Cenários Negativoss')
-            story('Filtrar dados passando texto como valor')
+            .story('Filtrar dados passando texto como valor')
             .owner('Kevin Aryel');
             homePage.pesquisarItemAleatorio(faker.color.human())
             listaProdutosPage.filtroPrecoInserirValores('teste','testando')

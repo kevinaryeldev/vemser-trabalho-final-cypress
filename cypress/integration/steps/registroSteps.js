@@ -40,7 +40,7 @@ context('Registro', () => {
             cy.allure()
             .epic('Teste de Registro')
             .feature('Cenários Negativos')
-            story('Fazer registro com email inválido')
+            .story('Fazer registro com email inválido')
             .owner('Eduardo Queiroz');
             let novoNome = faker.name.fullName();
             let novaSenha = faker.internet.password();
@@ -56,7 +56,7 @@ context('Registro', () => {
             cy.allure()
             .epic('Teste de Registro')
             .feature('Cenários Negativos')
-            story('Fazer registro com numero de celular inválido')
+            .story('Fazer registro com numero de celular inválido')
             .owner('Eduardo Queiroz');
             let url = cy.url();
             let novoNome = faker.name.fullName();

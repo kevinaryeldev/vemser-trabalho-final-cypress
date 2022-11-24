@@ -11,7 +11,7 @@ context('Testes Barra de Pesquisa',()=>{
             cy.allure()
             .epic('Teste de Pesquisa')
             .feature('Cenários Positivos')
-            story('Fazer pesquisa com texto válido')
+            .story('Fazer pesquisa com texto válido')
             .owner('Kevin Aryel');
             homePage.barraPesquisaPreencherInput(faker.color.human())
             homePage.barraPesquisaDropboxSelecionarCategoria()
@@ -24,7 +24,7 @@ context('Testes Barra de Pesquisa',()=>{
             cy.allure()
             .epic('Teste de Pesquisa')
             .feature('Cenários Negativos')
-            story('Fazer pesquisa com texto inválido')
+            .story('Fazer pesquisa com texto inválido')
             .owner('Kevin Aryel');
             homePage.barraPesquisaPreencherInput('sjdsadhkuahsfoiu')
             homePage.barraPesquisaClicarBtnPesquisar()

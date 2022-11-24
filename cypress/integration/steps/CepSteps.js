@@ -46,8 +46,4 @@ context('CEP', () => {
             basePage.validarText(msgCepIncorreto, "Insira um CEP válido")
         });
     })
-
-
-
-
 })
